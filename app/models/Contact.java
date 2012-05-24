@@ -56,6 +56,7 @@ public class Contact {
 		contact.setLastName(rs.getString("lastName"));
 		contact.setPhone(rs.getString("phone"));
 		contact.setAddress(rs.getString("address"));
+		contact.setZip(rs.getString("zip"));
 		return contact;
 	}
 	

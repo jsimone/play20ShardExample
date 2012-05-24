@@ -1,19 +1,22 @@
+@(contact: models.Contact)
+
 <html>
 <head>
 </head>
 <body>
-    <form name="addUserForm" action="">
+    <form name="addUserForm" method="POST">
         <label>First Name</label>
-        <input type="text" class="span3" name="firstName" id="firstName"/>
+        <input type="text" class="span3" name="firstName" id="firstName" value="@contact.getFirstName()"/>
         <label>Last Name</label>
-        <input type="text" class="span3" name="lastName" id="lastName"/>
+        <input type="text" class="span3" name="lastName" id="lastName" value="@contact.getLastName()"/>
         <label>Phone</label>
-        <input type="text" class="span3" name="phone" id="phone"/>
+        <input type="text" class="span3" name="phone" id="phone" value="@contact.getPhone()"/>
         <label>Address</label>
-        <input type="text" class="span3" name="address" id="address"/>
+        <input type="text" class="span3" name="address" id="address" value="@contact.getAddress()"/>
         <label>Zip</label>
-        <input type="text" class="span3" name="zip" id="zip"/>
-        <button type="submit" class="btn" id="addUserBtn">Submit</button>
+        <input type="text" class="span3" name="zip" id="zip" value="@contact.getZip()"/>
+        <input type="hidden" class="span3" name="origZip" id="origZip" value="@contact.getZip()"/>
+        <button type="submit" class="btn">Save</button>
     </form>
 </body>
 </html>

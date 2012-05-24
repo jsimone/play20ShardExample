@@ -3,10 +3,12 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
-GET     /contacts                           controllers.Application.index()
-POST     /contacts                           controllers.Application.insert()
-POST     /contact/:contactId                           controllers.Application.update(contactId: Long)
+GET     /                              controllers.Application.index()
+GET     /contacts                      controllers.Application.index()
+GET     /contacts/new                  controllers.Application.newContact()
+POST     /contacts/new                 controllers.Application.insert()
+GET     /contacts/:zip/:contactId      controllers.Application.editContact(contactId: Long, zip: String)
+POST     /contacts/:zip/:contactId     controllers.Application.update(contactId: Long, zip: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
