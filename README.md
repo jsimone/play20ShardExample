@@ -11,7 +11,7 @@ You can run this application on Heroku under your own account. Start by cloning 
 
 Add two databases to the application by executing the following command twice:
 
-    $ heroku addons:add heroku-postgresql:dev --app play20shardexample
+    $ heroku addons:add heroku-postgresql:dev
     ----> Adding heroku-postgresql:dev to play20shardexample... done, v11 (free)
       Attached as HEROKU_POSTGRESQL_CHARCOAL
       Database has been created and is available
@@ -25,7 +25,7 @@ Create the schema in both databases using the `heroku pg:psql` command. For each
 
 Then run the DDL in the ddl file at the psql prompt. Replace `db_color` with the color of each of your databases.
    
-Edit the application's configuration. In conf/application.conf you'll find:
+Edit the application's configuration. In `conf/application.conf` you'll find:
 
     # DB1
     db.db1.url=${HEROKU_POSTGRESQL_AMBER_URL}
@@ -45,4 +45,4 @@ Now add the changes to git and push the app to Heroku:
 
 ## See a live example
 
-You can see a live example of the application at play20shardexample.herokuapp.com
+You can see a live example of the application at:  http://play20shardexample.herokuapp.com
