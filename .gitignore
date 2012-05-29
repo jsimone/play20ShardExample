@@ -6,3 +6,6 @@ tmp
 .history
 dist
 .cache
+.settings
+.project
+.classpath
